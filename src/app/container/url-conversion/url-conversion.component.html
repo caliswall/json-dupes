@@ -1,0 +1,17 @@
+<p>The Json contained {{rawUrlBase.length}} items</p>
+<p>We found {{duplicateArray.length}} duplicate items</p>
+<table>
+  <tr>
+    <th>Base Item</th>
+    <th>Number of Duplicates</th>
+  </tr>
+  <tr *ngFor="let item of duplicateArray">
+    <td>
+      <p>App Name: {{item.base.app}}</p>
+      <p>Action Name: {{item.base.action}}</p>
+      <span> Params: </span>
+      <pre>{{item.base.urlParams | json}}</pre>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">{{item.count}}</td>
+  </tr>
+</table>
